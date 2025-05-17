@@ -203,7 +203,7 @@ docker tag my-python-app <username>/my-python-app:latest
 
 3. **Login to Azure Container Registry (ACR):** Open your terminal and run the following command, replacing `<registry_name>` with the name of your Azure Container Registry:
    ```bash
-   az acr login --name <registry_name>
+   docker login <registry_Login server> 
    ```
    You'll be prompted to authenticate with your Azure account.
    
