@@ -96,7 +96,7 @@ docker volume create my-data-volume
 ```
 ### Run a container with a volume mount
 ```bash
-docker run -it --name my-app -v my-data-volume:/app/data ubuntu:latest bash
+docker run -d --name webapp-server -v my-data-volume:/app/data ubuntu sleep infinity
 ```
 ### This mounts the volume my-data-volume to the /app/data directory within the container.
 
@@ -110,15 +110,15 @@ exit
 
 ### Stop the container
 ```bash
-docker stop my-app
+docker stop webapp-server
 ```
 ### Start the container again
 ```bash
-docker start my-app
+docker start webapp-server
 ```
 ### Re-enter the container
 ```bash
-docker exec -it my-app bash
+docker exec -it webapp-server bash
 ```
 ### Verify data inside the container
 ```bash
